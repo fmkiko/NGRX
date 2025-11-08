@@ -1,0 +1,14 @@
+<p>posts works!</p>
+
+<h2>Count: {{ postsCount$ | async }}</h2>
+
+@for (post of posts$ | async; track post.id) {
+  <div>
+    <p>{{post.id}}</p>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.description }}</p>
+  </div>
+}
+
+<button (click)="findPostById(2)">El post 2</button>
+{{ selectedPost$ | async | json }}

@@ -7,13 +7,14 @@ import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideRouterStore } from '@ngrx/router-store';
 import { counterReducer } from './store/counter/counter.reducer';
+import { postReducer } from './store/post/post.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideStore({ counter: counterReducer }),
+    provideStore({ counter: counterReducer, posts: postReducer }),
     provideEffects(),
     provideStoreDevtools({
       maxAge: 25,

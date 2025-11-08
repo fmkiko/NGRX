@@ -20,7 +20,6 @@ export class Posts {
 
   constructor(private store: Store) {
     this.posts$ = this.store.select(selectAllPosts);
-    this.postsCount$ = this.store.select(selectPostCount);
   }
 
   findPostById(id: number) {

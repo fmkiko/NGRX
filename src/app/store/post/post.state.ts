@@ -6,7 +6,6 @@ export interface Post {
 
 export interface PostState {
   posts: Post[];
-  selectedPostId?: number;
 }
 
 export const initialState: PostState = {
@@ -14,5 +13,5 @@ export const initialState: PostState = {
     { id: 1, title: 'First Post', description: 'This is the first post' },
     { id: 2, title: 'Second Post', description: 'This is the second post' }
   ],
-  selectedPostId: undefined
+  
 };

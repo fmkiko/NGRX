@@ -11,4 +11,7 @@
 }
 
 <button (click)="findPostById(2)">El post 2</button>
+<hr>
 {{ selectedPost$ | async | json }}
+<hr>
+{{ posts$ | async | json }}
